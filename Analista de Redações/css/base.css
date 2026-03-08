@@ -1,0 +1,51 @@
+﻿:root {
+    --bg-app: #e0ddd4;
+    /* Cor de fundo da janela (como a grama na imagem, mas vamos usar uma cor neutra no window background se formos simular ou tela inteira normal) */
+    --bg-sidebar: #f7f6f2;
+    /* Um bege clarinho, clean */
+    --bg-main: #ffffff;
+    --text-primary: #171717;
+    --text-secondary: #666666;
+    --border-color: #e5e5e5;
+    --border-radius-sm: 6px;
+    --border-radius-md: 10px;
+    --border-radius-lg: 14px;
+    --accent: #111111;
+    --accent-hover: #333333;
+    --highlight: #f3f4f6;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-app);
+    color: var(--text-primary);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Imagem de fundo opcional para simular ambiente desktop, mas vamos apenas usar a cor de app container como principal */
+}
+
+.app-container {
+    width: 100%;
+    height: 100%;
+    /* Se quisessemos simular a janela de macOS da imagem:
+    width: 95vw; height: 90vh; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+    */
+    background: var(--bg-sidebar);
+    display: flex;
+    overflow: hidden;
+}
+
+/* Utility */
+.hidden {
+    display: none !important;
+}
